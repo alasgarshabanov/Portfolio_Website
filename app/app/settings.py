@@ -25,7 +25,7 @@ SECRET_KEY = '6w5!q4)j3&84#0tsmx!4a$sdno^t!zb$j*a-a=4$os_2_qf7#b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ.get('POSTGRES_DB', "db_name"),
         'USER': os.environ.get('POSTGRES_USER', "db_user"),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', "6NwpPtvGyCsMLAKDZtazEP9WjANze25eP3e2UJdWrgrrKq"),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', "5656f6ude5463sy"),
         'HOST': os.environ.get('POSTGRES_HOST', "localhost"),
         'PORT': os.environ.get('POSTGRES_PORT', 5432),
     }
