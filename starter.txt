@@ -1,0 +1,5 @@
+command_1=> bash starter.sh django-app {app_name}
+
+development>docker-compose up -d --build>>docker-compose down
+
+flush to delete all migrations

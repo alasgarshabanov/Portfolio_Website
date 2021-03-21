@@ -1,6 +1,8 @@
 postgredb/
 redisdb/
 .venv/
+venv/
+env/
 .idea/
 *.pyc
 *.log
