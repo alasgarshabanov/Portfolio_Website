@@ -1,6 +1,10 @@
 from django.contrib import admin
-
-# Register your models here.
-from core.models import ContactModel
+from .models import ContactModel, Article, Category, Project, Service, AdminModel, Skill
 
 admin.site.register(ContactModel)
+admin.site.register(Article)
+admin.site.register(Category)
+admin.site.register(Project)
+admin.site.register(Service)
+admin.site.register(AdminModel)
+admin.site.register(Skill)

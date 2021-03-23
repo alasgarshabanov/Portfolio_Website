@@ -1,3 +1,4 @@
+{% load static %}
 <section id="work" class="portfolio-mf sect-pt4 route">
     <div class="container">
       <div class="row">
@@ -14,19 +15,20 @@
         </div>
       </div>
       <div class="row">
+        {% for project in projects %}
         <div class="col-md-4">
           <div class="work-box">
-            <a href="static/img/work-1.jpg" data-gall="portfolioGallery" class="venobox">
+            <a href="{{project.image.url}}" data-gall="portfolioGallery" class="venobox">
               <div class="work-img">
-                <img src="static/img/work-1.jpg" alt="" class="img-fluid">
+                <img src="{{project.image.url}}" alt="" class="img-fluid">
               </div>
             </a>
             <div class="work-content">
               <div class="row">
                 <div class="col-sm-8">
-                  <h2 class="w-title">Lorem impsum dolor</h2>
+                  <h2 class="w-title">{{project.title}}</h2>
                   <div class="w-more">
-                    <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
+                    <span class="w-ctegory">{{project.category}}</span> / <span class="w-date">{{project.uploaded_at|date:"d-m-Y"}}</span>
                   </div>
                 </div>
                 <div class="col-sm-4">
@@ -38,7 +40,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+        {%endfor%}
+<!--         <div class="col-md-4">
           <div class="work-box">
             <a href="static/img/work-2.jpg" data-gall="portfolioGallery" class="venobox">
               <div class="work-img">
@@ -157,7 +160,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </div>
     </div>
